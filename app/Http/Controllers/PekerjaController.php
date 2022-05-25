@@ -29,7 +29,6 @@ class PekerjaController extends Controller
     }
 
     public function updatedata(Request $request, $id){
-        dd($request->all());
         $data = pekerja::find($id);
         $data->update($request->all());
         return redirect()->route('pekerja');
