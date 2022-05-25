@@ -14,9 +14,9 @@ use App\Http\Controllers\PekerjaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/pekerja',[PekerjaController::class, 'index'])->name('pekerja');
 
