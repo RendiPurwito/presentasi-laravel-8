@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PekerjaController;
+use App\Http\Controllers\SiswaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +20,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pekerja',[PekerjaController::class, 'index'])->name('pekerja');
+// Pekerja
+Route::get('/pekerja', [PekerjaController::class, 'index'])->name('pekerja');
 
-Route::get('/tambahpekerja',[PekerjaController::class, 'tambahpekerja'])->name('tambahpekerja');
+Route::get('/tambahpekerja', [PekerjaController::class, 'tambahpekerja'])->name('tambahpekerja');
 
-Route::post('/insertdata',[PekerjaController::class, 'insertdata'])->name('insertdata');
+Route::post('/insertdatapekerja', [PekerjaController::class, 'insertdatapekerja'])->name('insertdatapekerja');
 
-Route::get('/tampilkandata/{id}',[PekerjaController::class, 'tampilkandata'])->name('tampilkandata');
+Route::get('/tampilkandatapekerja/{id}', [PekerjaController::class, 'tampilkandatapekerja'])->name('tampilkandatapekerja');
 
-Route::post('/updatedata/{id}',[PekerjaController::class, 'updatedata'])->name('updatedata');
+Route::post('/updatedatapekerja/{id}', [PekerjaController::class, 'updatedatapekerja'])->name('updatedatapekerja');
 
-Route::get('/deletedata/{id}',[PekerjaController::class, 'deletedata'])->name('deletedata');
+Route::get('/deletedatapekerja/{id}', [PekerjaController::class, 'deletedatapekerja'])->name('deletedatapekerja');
+
+// Siswa
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa');
+
+Route::get('/tambahsiswa', [SiswaController::class, 'tambahsiswa'])->name('tambahsiswa');
+Route::post('/insertdatasiswa', [SiswaController::class, 'insertdatasiswa'])->name('insertdatasiswa');
+
+Route::get('/tampilkandatasiswa/{id}', [SiswaController::class, 'tampilkandatasiswa'])->name('tampilkandatasiswa');
+Route::post('/updatedatasiswa/{id}', [SiswaController::class, 'updatedatasiswa'])->name('updatedatasiswa');
+
+Route::get('/deletedatasiswa/{id}', [SiswaController::class, 'deletedatasiswa'])->name('deletedatasiswa');

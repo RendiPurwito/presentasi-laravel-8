@@ -33,8 +33,8 @@
                         <td>0{{ $row->notelpon }}</td>
                         <td>{{ $row->created_at }}</td>
                         <td>
-                            <a href="/tampilkandata/{{ $row->id }}"  class="btn btn-warning">Edit</a>
-                            <a href="/deletedata/{{ $row->id }}" class="btn btn-danger">Delete</a>
+                            <a href="/tampilkandatapekerja/{{ $row->id }}"  class="btn btn-warning">Edit</a>
+                            <a href="/deletedatapekerja/{{ $row->id }}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
